@@ -47,7 +47,11 @@
     // Find the comment with this ID
     // delete the comment with the ID of 823423
     const commentId = comments.findIndex(comment => comment.id === 823423)
-    console.log(commentId)
+    const newComments = [
+      ...comments.slice(0, commentId),
+      ...comments.splice(commentId + 1)
+    ]
+    console.table(newComments)
 
   </script>
 </body>
