@@ -22,4 +22,11 @@ function togglePlay() {
 }
 //  Hook up event listeners
 
+function updateButton() {
+    console.log("update the button");
+}
+
 video.addEventListener('click', togglePlay);
+video.addEventListener('play', updateButton);
+video.addEventListener('pause', updateButton);
+toggle.addEventListener('click', togglePlay);
